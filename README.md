@@ -10,11 +10,9 @@ macOS menü çubuğunda çalışan uygulama bazlı ses mikseri.
 
 ## Derleme
 
-```sh
-chmod +x Packaging/build-app.sh
-./Packaging/build-app.sh
-open build/Soundboard.app
-```
+- Zip dosyasını indirip dosyaları extract ediniz.
+- Çıkartılan uygulamayı çalıştırınız.
+- Uygulama ilk kez ses kontrolü yaptığında **Sistem Ayarları → Gizlilik ve Güvenlik altından yinede çalıştırı seçin.
 
 macOS'un ses süreci olarak gördüğü açık uygulamalar ayrı ayrı kısılır veya susturulur.
 
