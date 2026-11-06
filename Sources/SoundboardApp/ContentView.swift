@@ -4,6 +4,12 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject private var router: RouterManager
 
+    private var height: CGFloat {
+        let contentHeight = max(180, CGFloat(router.apps.count) * 64 + 45)
+        let screenHeight = max(180, (NSScreen.main?.visibleFrame.height ?? 800) - 80)
+        return min(contentHeight, screenHeight)
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             MixerList()
@@ -32,7 +38,7 @@ struct ContentView: View {
             }
             .padding(10)
         }
-        .frame(width: 430, height: 520)
+        .frame(width: 430, height: height)
     }
 }
 
